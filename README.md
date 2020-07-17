@@ -39,7 +39,8 @@ var pos = await HttpPosFactory.CreatePosAsync(new HttpPosClientOptions
     Url = new Uri(url), 
     CommunicationType = HttpCommunicationType.Json,     // Or HttpCommunicationType.Xml
     CashboxId = cashboxId,
-    AccessToken = "<ACCESS_TOKEN>"                      // Only required for SignaturCloud 
+    AccessToken = "<ACCESS_TOKEN>"                      // Only required for SignaturCloud
+    UseUnversionedLegacyUrls = false                    // Optional. Set `true` for fiskaltrust.Middleware < 1.3
     RetryPolicyOptions = new RetryPolicyOptions { ... } // Optional
 });
 ```
